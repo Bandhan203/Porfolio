@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import smartDineImg from '../assets/Smart_dine.png';
+import shikhboAiImg from '../assets/ShikhboAI.png';
+import travelFactoryImg from '../assets/Travel Factory.png';
+import sdshImg from '../assets/SDSH.png';
 
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLDivElement>(null);
@@ -12,27 +16,67 @@ const Portfolio = () => {
         }
       },
       { threshold: 0.1 }
-    );
+        );
 
-    if (portfolioRef.current) {
+        if (portfolioRef.current) {
       observer.observe(portfolioRef.current);
-    }
+        }
 
-    return () => observer.disconnect();
-  }, []);
+        return () => observer.disconnect();
+      }, []);
 
-  const projects = [
-    {
+      const projects = [
+        {
       id: 1,
       title: 'SmartDine: Restaurant Management & Food Waste Analytics',
       category: 'Full-Stack Application',
       description: 'A Restaurant Management and Food Waste Analytics System using React.js and PHP Laravel. Features order tracking, inventory, analytics, and more.',
-      image: '/public/Smart_Dine.png',
+      image: smartDineImg,
       tags: ['React.js', 'PHP Laravel', 'Full-Stack', 'Analytics'],
       link: 'https://smart-dine.netlify.app/',
       github: 'https://github.com/Bandhan203'
-    }
-  ];
+        },
+        {
+      id: 2,
+      title: 'Shikhbo AI - AI Learning Platform',
+      category: 'UI/UX Design',
+      description: 'An innovative AI-powered learning platform designed to provide personalized educational experiences with modern interface and seamless user interaction.',
+      image: shikhboAiImg,
+      tags: ['UI/UX', 'Web Design', 'AI Platform', 'Education'],
+      link: 'https://shikhboai.xyz/',
+      github: 'https://www.behance.net/sarderbandhan'
+        },
+        {
+      id: 3,
+      title: 'Travel Factory BD - Travel Agency Website',
+      category: 'UI/UX Design',
+      description: 'A comprehensive travel agency website featuring stunning visuals and intuitive booking experience for exploring Bangladesh and beyond.',
+      image: travelFactoryImg,
+      tags: ['UI/UX', 'Web Design', 'Travel', 'Booking System'],
+      link: 'https://travelfactorybd.com/',
+      github: 'https://www.behance.net/sarderbandhan'
+        },
+        {
+      id: 4,
+      title: 'SDS Hospital - Healthcare Website',
+      category: 'UI/UX Design',
+      description: 'Professional healthcare website design focusing on patient experience, appointment booking, and medical service information with clean, accessible interface.',
+      image: sdshImg,
+      tags: ['UI/UX', 'Web Design', 'Healthcare', 'Accessibility'],
+      link: 'https://sdshospital.org/',
+      github: 'https://www.behance.net/sarderbandhan'
+        },
+        {
+      id: 5,
+      title: 'My Sylhet Titans - Sports Team Website',
+      category: 'Upcoming Project',
+      description: 'Dynamic sports team website showcasing team information, match schedules, and fan engagement features with an energetic design.',
+      image: '',
+      tags: ['UI/UX', 'Web Design', 'Sports', 'Branding'],
+      link: 'https://mysylhettitans.com/',
+      github: 'https://www.behance.net/sarderbandhan'
+        }
+      ];
 
   return (
     <section id="portfolio" className="py-32 bg-gray-50 dark:bg-gray-800">
@@ -40,10 +84,10 @@ const Portfolio = () => {
         <div ref={portfolioRef} className="opacity-0 transform translate-y-8 transition-all duration-1000">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Selected Work
+              Projects I Have Done
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Case studies showcasing my approach to design and development challenges
+              Showcasing my UI/UX design and development work across various industries
             </p>
           </div>
 
@@ -54,29 +98,40 @@ const Portfolio = () => {
                 className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full max-h-64 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-500 mx-auto"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="flex space-x-3">
-                      <a 
-                        href={project.link}
-                        className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                      <a 
-                        href={project.github}
-                        className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-                      >
-                        <Github size={20} />
-                      </a>
+                {project.image ? (
+                  <>
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full max-h-64 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-500 mx-auto"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="flex space-x-3">
+                          <a 
+                            href={project.link}
+                            className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+                          >
+                            <ExternalLink size={20} />
+                          </a>
+                          <a 
+                            href={project.github}
+                            className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+                          >
+                            <Github size={20} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 h-64 flex items-center justify-center">
+                    <div className="text-white text-center p-6">
+                      <h4 className="text-3xl font-bold mb-2">Coming Soon</h4>
+                      <p className="text-sm opacity-90">This project is currently in development</p>
                     </div>
                   </div>
-                </div>
+                )}
                 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">

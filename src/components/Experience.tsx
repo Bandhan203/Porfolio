@@ -21,14 +21,15 @@ const Experience = () => {
   const experiences = [
     {
       type: 'work',
-      title: 'Full-Stack Web Developer (Intern)',
+      title: 'UI/UX Designer',
       company: 'Code-Tree',
-      period: '18.06.2025 – 18.09.2025',
-      description: 'Interned as a Full-Stack Web Developer. Built a restaurant management and food waste analytics system using React.js and PHP Laravel.',
+      period: 'Present',
+      description: 'Currently working as a UI/UX Designer, creating intuitive and visually appealing user interfaces for web and mobile applications.',
       achievements: [
-        'Project: SmartDine: A Restaurant Management and Food Waste Analytics System',
-        'Tech: React.js, PHP Laravel',
-        'Live: https://smart-dine.netlify.app/'
+        'Designing user-centered interfaces for various client projects',
+        'Creating wireframes, prototypes, and high-fidelity designs',
+        'Collaborating with development teams to ensure design implementation',
+        'Tools: Figma, Adobe XD, User Research & Testing'
       ]
     },
     {

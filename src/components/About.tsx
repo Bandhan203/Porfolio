@@ -116,9 +116,9 @@ const About = () => {
 
                 <div className="pt-4">
                   <a 
-                    href="/Curriculum%20vitae.pdf" 
+                    href="/Sarder%20Rifat%20Rahman.pdf" 
                     download
-                    className="group inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-orange-500/25"
+                    className="group inline-flex items-center space-x-3 bg-gradient-to-r from-royal-600 to-royal-700 text-white px-8 py-4 rounded-full font-semibold hover:from-royal-700 hover:to-royal-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-royal-500/30"
                   >
                     <Download size={20} className="group-hover:animate-bounce" />
                     <span>Get My Resume</span>
@@ -131,7 +131,7 @@ const About = () => {
               <div className="relative group">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-700/50 bg-gradient-to-br from-gray-800 to-gray-900">
                   <img 
-                    src="/Bandhan_GitHub.jpg" 
+                    src="/Porfolio/Bandhan_GitHub.jpg" 
                     alt="Rifat Rahman Bandhan - UI/UX Designer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

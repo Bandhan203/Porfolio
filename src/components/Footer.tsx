@@ -45,10 +45,11 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://dribbble.com" 
+                href="https://www.behance.net/sarderbandhan" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 bg-white dark:bg-gray-700 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110 text-gray-600 dark:text-gray-400"
+                title="Behance Profile"
               >
                 <Dribbble size={20} />
               </a>
@@ -94,7 +95,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-500 dark:text-gray-400 flex items-center justify-center">
-            © {currentYear} Sarder Rifat Rahman Bandhan. Made with <Heart className="text-red-500 mx-2" size={16} /> and lots of coffee.
+            © {currentYear} Sarder Rifat Rahman Bandhan.
           </p>
         </div>
       </div>

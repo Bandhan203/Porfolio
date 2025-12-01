@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Palette, CheckCircle, ArrowRight } from 'lucide-react';
+import { Palette, CheckCircle, ArrowRight, Layout, Smartphone, Layers, Sparkles, Code } from 'lucide-react';
 
 const Services = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -33,6 +33,66 @@ const Services = () => {
         'Design system creation',
         'Usability testing'
       ]
+    },
+    {
+      title: 'Web Design',
+      description: 'Stunning, responsive websites that captivate and convert visitors',
+      icon: <Layout size={32} />,
+      features: [
+        'Responsive web design',
+        'Landing page design',
+        'E-commerce design',
+        'Custom illustrations',
+        'Brand consistency'
+      ]
+    },
+    {
+      title: 'Mobile App Design',
+      description: 'Intuitive mobile experiences for iOS and Android platforms',
+      icon: <Smartphone size={32} />,
+      features: [
+        'iOS & Android design',
+        'App wireframing',
+        'Interactive prototypes',
+        'Icon & asset design',
+        'App store optimization'
+      ]
+    },
+    {
+      title: 'Design Systems',
+      description: 'Scalable design systems for consistent brand experiences',
+      icon: <Layers size={32} />,
+      features: [
+        'Component libraries',
+        'Style guide creation',
+        'Design tokens',
+        'Documentation',
+        'Collaboration tools'
+      ]
+    },
+    {
+      title: 'Brand Identity',
+      description: 'Memorable brand identities that tell your unique story',
+      icon: <Sparkles size={32} />,
+      features: [
+        'Logo design',
+        'Brand guidelines',
+        'Color palette creation',
+        'Typography selection',
+        'Visual identity system'
+      ]
+    },
+    {
+      title: 'Frontend Development',
+      description: 'Pixel-perfect implementation of designs with modern technologies',
+      icon: <Code size={32} />,
+      features: [
+        'React & Next.js development',
+        'Responsive implementation',
+        'Animation & interactions',
+        'Performance optimization',
+        'Cross-browser compatibility'
+      ]
     }
   ];
 
@@ -56,20 +116,18 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div 
                 key={service.title}
-                className={`relative bg-gray-50 dark:bg-gray-800 p-8 rounded-lg border-2 border-gray-300 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}
-                style={{ animationDelay: `${index * 100}ms`, width: '350px', maxWidth: '90vw' }}
+                className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-royal-400/50 dark:hover:border-gold-400/50"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* No popular badge needed */}
                 
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <div className="text-gray-700 dark:text-gray-300">
-                      {service.icon}
-                    </div>
+                <div className="mb-8">
+                  <div className="text-royal-500 dark:text-gold-400 mb-6">
+                    {service.icon}
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -86,7 +144,7 @@ const Services = () => {
                 <div className="space-y-4 mb-8">
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-center space-x-3">
-                      <CheckCircle className="text-green-500 dark:text-green-400 flex-shrink-0" size={20} />
+                      <CheckCircle className="text-royal-500 dark:text-gold-400 flex-shrink-0" size={20} />
                       <span className="text-gray-600 dark:text-gray-400">{feature}</span>
                     </div>
                   ))}
@@ -94,9 +152,7 @@ const Services = () => {
                 
                 <button 
                   onClick={scrollToContact}
-                  className={
-                    'w-full py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-900 dark:hover:border-white hover:text-gray-900 dark:hover:text-white'
-                  }
+                  className="w-full bg-gradient-to-r from-royal-600 to-royal-700 hover:from-royal-700 hover:to-royal-800 text-white py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:shadow-royal-500/30"
                 >
                   <span>Get Started</span>
                   <ArrowRight size={16} />
